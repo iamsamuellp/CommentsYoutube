@@ -1,7 +1,3 @@
-try:
-  from commentsdatabase.local_setting import *
-except ImportError:
-  pass
 
 
 # SECURITY WARNING: keep the secret key used in production secret!

@@ -24,7 +24,7 @@ class CommentList(APIView):
         return Response(serializer.data, status=status.HTTP_201_CREATED)
       return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)  
       
-  class CommentDetail(APIView): 
+class CommentDetail(APIView): 
 
     def get_comment(self, pk):
       try:
@@ -33,7 +33,7 @@ class CommentList(APIView):
         raise
 
     def get(self,request,pk):
-      song = self.comments(pk)
+      song = self.get_comment(pk)
       serializers = CommentsSerializer(song)
       return Response(serializers.data)
 

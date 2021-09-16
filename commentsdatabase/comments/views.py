@@ -9,7 +9,7 @@ from django.http import Http404
 
 
 
-# Create your views here.
+
 class CommentList(APIView):
 
   def get(self, request):
